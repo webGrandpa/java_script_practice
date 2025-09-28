@@ -190,3 +190,151 @@
 
 
 // console.log(countLetter("lanwdonoinflainldawnodianmwodnaeofbaodma;lNOCzdsklhbcouysdabhpOINd;af", "a"));
+
+// function outerFunction() {
+//     let message = "Hello from closure!";
+//     function innerFunction() {
+//         return message;
+//     }
+//     return innerFunction;
+// }
+
+// const inner = outerFunction();
+// console.log(inner());
+
+
+// function createCounter() {
+//     let count = 0;
+//     function innerFunction() {
+//         count++;
+//         return count;
+//     }
+//     return innerFunction;
+// }
+
+// const counter = createCounter();
+// console.log(counter()); 
+// console.log(counter()); 
+// console.log(counter()); 
+
+// function createBankAccount(initialBalance){
+//     let balance = initialBalance;
+    
+// }
+
+// const accaunt = createBankAccount(100);
+// account.deposit(50);
+// accaunt.withdraw(70);
+// // console.log(account.getBalance());
+// // console.log(account.balance);
+
+// function deepClosure() {
+//     let level1 = 1;
+
+//     function level2() {
+//         let level2 = 2;
+//         let sum1 = level2 + level1;
+
+//         function level3() {
+//             let level3 = 3;
+//             let sum2 = level3 + sum1;
+//             function level4() {
+//                 let level4 = 4;
+//                 let sum3 = level4 + sum2;
+//                 function level5() {
+//                     let level5 = 5;
+//                     return sum3 + level5;
+//                 }
+                
+//                 return level5();
+//             }
+
+//             return level4();
+//         }
+
+//         return level3();
+//     }
+
+//     return level2();
+// }
+
+// const deepFunc = deepClosure();
+// console.log(deepFunc);
+
+// ვერი ჰარდი
+
+// function memoizedFactorial(n) {
+    
+//     function innerFactorial(){
+//         return n * (n - 1);
+//     }
+// }
+
+// const factorial = memoizedFactorial();
+// console.log(factorial(5));
+// console.log(factorial(6)); 
+
+
+// console.log(!!!!!5);
+
+// function factorial(n){
+    
+//     for(let i = n; n > 0; i--){
+//         return n *= (n - 1);
+//     }
+// }
+// console.log(factorial(5));
+
+// function factorial(n) {
+//     if (n === 0 || n === 1) {
+//       return 1;
+//     }
+  
+//     let result = 1;
+//     for (let i = 2; i <= n; i++) {
+//       result = result * i;
+//     }
+//     return result;
+//   }
+  
+//   console.log(factorial(9));
+
+// function arrayToString(arr){
+//     return arr.join(" ");
+// }
+
+// function weather(temperature){
+//     return `It,s ${temperature > 25? "hot" : temperature >15 ? "warm" : "cold"}`;
+// }
+
+// console.log(weather(30));
+
+// function grades(scores1){
+//     return `
+//     ${scores1 > 90 ? 'A'
+//     : scores1 > 80 ? 'B'
+//     : scores1 > 70 ? 'c'
+//     : 'fail'}`;
+// }
+// console.log(grades(85));
+
+//Statement
+
+const animal = "cat";
+
+switch(animal){
+    case 'dog':
+        console.log("woof");
+        break;
+    case 'cat':
+        console.log("meow");
+        break;
+    case 'cow':
+        console.log("moo");
+        break;
+    default:
+        console.log("unknown animal");
+        break;
+
+}
+console.log(animal('dog'));
