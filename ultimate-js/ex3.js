@@ -80,6 +80,6 @@
 // Твой ход.
 
 
-const isAdult = age => {
-    return !(age > 18)
-}
+const isAdult = age => age >= 18;
+
+isAdult(19);

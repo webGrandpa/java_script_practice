@@ -1,0 +1,1 @@
+const addNumberToEnd = (arr, num) => arr.push(num);
