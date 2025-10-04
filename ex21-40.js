@@ -16,3 +16,27 @@ const counterB = createCounter();
 
 counterB();
 counterB();
+
+function first (){
+    let x = 1;
+    function second (){
+        let y = 2;
+        function third (){
+            let z = 3;
+            console.log(x, y, z);
+        }
+        third();
+    }
+    second();
+};
+
+console.log(first());
+
+const multiplier = number => { 
+    2 * number;
+    const createMultiplier = number * 5;
+    return createMultiplier;
+}
+
+multiplier(2);
+
