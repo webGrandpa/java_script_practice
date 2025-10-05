@@ -32,11 +32,38 @@ function first (){
 
 console.log(first());
 
-const multiplier = number => { 
-    2 * number;
-    const createMultiplier = number * 5;
-    return createMultiplier;
-}
+const createMultiplier = (multiplier) => {
+    return function (number) {
+        return number * multiplier;
+    }
+};
 
-multiplier(2);
+// const createMultiplier = (multiplier) => (number) => number * multiplier;
 
+const duble = createMultiplier(2);
+
+console.log(duble(3));
+
+const concatString = (str) => (stri) => str + stri;
+
+const stringing = concatString('algo');
+
+console.log(stringing('rithm'));
+
+//exercise 21-23
+
+const demonstrateThisProblem = () =>{
+    const robot = {
+        model: "R2-D2",
+        greet(){
+            console.log(`I am a robot model ${this.model}`);
+        }
+    }
+
+
+    const executeCallback = (callback) => callback();
+
+    return executeCallback(robot.greet);
+};
+
+demonstrateThisProblem();
