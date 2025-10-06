@@ -56,7 +56,7 @@ const demonstrateThisProblem = () =>{
     const robot = {
         model: "R2-D2",
         greet(){
-            console.log(`I am a robot model ${this.model}`);
+            return `I am a robot model ${this.model}`;
         }
     }
 
@@ -67,3 +67,42 @@ const demonstrateThisProblem = () =>{
 };
 
 demonstrateThisProblem();
+
+
+
+const robot = {
+    model: "R2-D2",
+    greet() {
+        return `I am a robot model ${this.model}`;
+    }
+    };
+
+const bindedRobot = robot.greet.bind(robot);
+
+console.log(bindedRobot());
+
+
+const executeCallback = (callback) => callback();
+
+executeCallback(robot.greet);
+
+
+const bindGreet = robot.greet.bind(robot);
+
+executeCallback(bindGreet);
+
+const car = {
+    brand: "Tesla",
+    speed: 0,
+    accelerate(amount) {
+        setTimeout(() => {
+        this.speed+=amount;
+        console.log(`${this.brand} is accelerating. Current speed: ${this.speed}`);
+        }, 1000)
+    }
+}
+
+const bindCar = car.accelerate.bind(car);
+
+console.log(bindCar(50));
+
